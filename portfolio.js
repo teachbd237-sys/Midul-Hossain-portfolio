@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
     { cat: 'youtube', label: 'YouTube', title: 'Clint Hunting', desc: 'Video For Zenvio Studio', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'cPDrZKY4je0' },
     { cat: 'youtube', label: 'YouTube', title: 'Easy Shopz', desc: 'Video For Zenvio Studio', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'EXTgIBza8jI' },
     { cat: 'youtube', label: 'YouTube', title: 'Quran Care online academy', desc: 'Video For Zenvio Studio', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'sZ_L9ppYM8k' },
-    { cat: 'youtube', label: 'YouTube', title: 'MN Fashion', desc: 'Video For Zenvio Studio', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'm0T60NqqWjE' },
+    { cat: 'youtube', label: 'YouTube', title: 'MN Fashion', desc: 'Video For Zenvio Studio', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'pdhS8QjO8bI' },
     { cat: 'youtube', label: 'YouTube', title: 'Raincot Promo Video', desc: 'Video For Zenvio Studio', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'hkNIYNzlWNY' },
     { cat: 'youtube', label: 'YouTube', title: 'Jihad Khan', desc: 'practice', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'KVB7ipfefLk' },
     { cat: 'youtube', label: 'YouTube', title: 'Tilwatul Quran Academy', desc: 'Video For Zenvio Studio', grad: 'linear-gradient(135deg,#1c3a5e,#0f1622)', youtube: 'QDtZidvrQb8' },
