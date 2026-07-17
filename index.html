@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midul Hossain — Video Editor & Motion Graphics Artist</title>
+<meta name="description" content="Mehedul is a professional video editor and motion graphics artist crafting cinematic commercials, YouTube content, and social reels.">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ LOADING SCREEN ============ -->
+<div id="loader">
+  <div class="loader-inner">
+    <span class="loader-mark">M.</span>
+    <div class="loader-count"><span id="loaderPercent">0</span>%</div>
+  </div>
+  <div class="loader-bar"><div class="loader-bar-fill" id="loaderFill"></div></div>
+</div>
+
+<!-- ============ CUSTOM CURSOR ============ -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- ============ SCRUB PROGRESS BAR ============ -->
+<div class="scrub-bar" aria-hidden="true">
+  <div class="scrub-track">
+    <div class="scrub-fill" id="scrubFill"></div>
+    <div class="scrub-playhead" id="scrubPlayhead"></div>
+  </div>
+</div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">Midul Hossain<span class="dot">.</span></a>
+    <nav class="nav-links">
+      <a href="#about" data-magnetic>About</a>
+      <a href="#brief" data-magnetic>Start Project</a>
+      <a href="#services" data-magnetic>Services</a>
+      <a href="#experience" data-magnetic>Experience</a>
+      <a href="#contact" data-magnetic>Contact</a>
+    </nav>
+    <a href="portfolio.html" class="btn btn-small btn-primary" data-magnetic>View Portfolio</a>
+    <a href="#contact" class="btn btn-small btn-outline" data-magnetic>Hire Me</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="navMobile">
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#about">About</a>
+    <a href="#brief">Start Project</a>
+    <a href="#services">Services</a>
+    <a href="#experience">Experience</a>
+    <a href="#contact">Contact</a>
+  </div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="hero">
+  <canvas id="particleCanvas" class="hero-canvas"></canvas>
+  <div class="glow glow-a" id="glowA"></div>
+  <div class="glow glow-b" id="glowB"></div>
+
+  <div class="hero-content">
+    <p class="timecode reveal-up">00:00:00:01 — INTRO</p>
+    <h1 class="hero-title">
+      <span class="line reveal-up">My Name is</span>
+      <span class="line reveal-up hero-name">Midul Hossain<span class="accent-dot">.</span></span>
+    </h1>
+    <div class="role-rotator reveal-up">
+      <span class="role-prefix">I work as a</span>
+      <span class="role-text" id="roleText">Video Editor</span>
+    </div>
+    <p class="hero-desc reveal-up">
+      আমি এমন ভিডিও তৈরি করি, যা শুধু সুন্দর দেখায় না—দর্শকের মনোযোগও ধরে রাখে। বিজ্ঞাপন, ইউটিউব কনটেন্ট, রিলস এবং মোশন গ্রাফিক্স—প্রতিটি প্রজেক্টে থাকে নিখুঁত এডিটিং, সৃজনশীলতা এবং গল্প বলার ছোঁয়া।
+    </p>
+    <div class="hero-cta reveal-up">
+      <a href="portfolio.html" class="btn btn-primary" data-magnetic>View Portfolio</a>
+      <a href="#contact" class="btn btn-ghost" data-magnetic>Hire Me</a>
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+    <span class="scroll-label">Scroll</span>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="container">
+    <p class="timecode">00:00:00:02 — ABOUT</p>
+    <div class="about-grid">
+      <div class="about-copy">
+        <img src="assets/images/midul.png" alt="Mehedul" class="profile-photo" onerror="this.style.display='none'">
+        <h2 class="section-title reveal-up">The editor behind<br>the cuts.</h2>
+        <p class="reveal-up">
+          আমি  মিদুল হোসেন । আমি একজন student এবং প্রফেশনাল video editor । 
+আমার Adobe Premiere Pro, Adobe After Effects এবং CapCut-এর উপর ভালো দক্ষতা রয়েছে। আমি YouTube, সোশ্যাল মিডিয়া, বিজ্ঞাপন এবং প্রোমোশনাল কনটেন্টের জন্য ১০০% প্রফেশনাল, আকর্ষণীয় এবং eye-catching ভিডিও তৈরি করতে পারি।
+আমি একজন পরিশ্রমী এবং দায়িত্বশীল মানুষ। সময়মতো উচ্চমানের কাজ ডেলিভারি দেওয়াই আমার লক্ষ্য। ক্লায়েন্টের সন্তুষ্টিই আমার প্রথম অগ্রাধিকার।
+আপনি যদি একজন দক্ষ এবং নিবেদিত ভিডিও এডিটর খুঁজে থাকেন, তাহলে আপনার প্রজেক্টের জন্য আমাকে হায়ার করতে পারেন। আমি আত্মবিশ্বাসী যে নির্দিষ্ট সময়ের মধ্যেই আপনাকে সেরা ফলাফল দিতে পারব।
+ধন্যবাদ!
+        </p>
+        <p class="reveal-up">
+          আমি কমার্শিয়াল বিজ্ঞাপন, দীর্ঘমেয়াদি ইউটিউব কনটেন্ট এবং দ্রুতগতির শর্ট-ফর্ম ভিডিও নিয়ে কাজ করি। ভিডিওর ধরন যাই হোক না কেন, আমার লক্ষ্য একটাই—দর্শকের দৃষ্টি প্রথম মুহূর্ত থেকেই ধরে রাখা।
+        </p>
+
+        <div class="stats-grid reveal-up">
+          <div class="stat">
+            <span class="stat-num" data-count="1" data-suffix="+">0</span>
+            <span class="stat-label">Years Experience</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="50" data-suffix="+">0</span>
+            <span class="stat-label">Projects Delivered</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="47" data-suffix="+">0</span>
+            <span class="stat-label">Happy Clients</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-count="2">0</span>
+            <span class="stat-label">Industry Awards</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-skills reveal-up">
+        <h3 class="skills-title">Toolkit</h3>
+        <ul class="skill-list">
+          <li class="skill-item">
+            <span class="skill-icon" style="--ic:#9999FF">Pr</span>
+            <div class="skill-meta">
+              <div class="skill-top"><span>Premiere Pro</span><span class="skill-pct">99%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="99"></div></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-icon" style="--ic:#9999FF">Ae</span>
+            <div class="skill-meta">
+              <div class="skill-top"><span>After Effects</span><span class="skill-pct">95%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="95"></div></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-icon" style="--ic:#EF6C4D">Dr</span>
+            <div class="skill-meta">
+              <div class="skill-top"><span>DaVinci Resolve</span><span class="skill-pct">80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-icon" style="--ic:#31A8FF">Ps</span>
+            <div class="skill-meta">
+              <div class="skill-top"><span>Photoshop</span><span class="skill-pct">99%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="99"></div></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-icon" style="--ic:#FF9A00">Ai</span>
+            <div class="skill-meta">
+              <div class="skill-top"><span>Illustrator</span><span class="skill-pct">99%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="99"></div></div>
+            </div>
+          </li>
+          <li class="skill-item">
+            <span class="skill-icon" style="--ic:#8B5CF6">Cc</span>
+            <div class="skill-meta">
+              <div class="skill-top"><span>CapCut</span><span class="skill-pct">98%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="98"></div></div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECT BRIEF ============ -->
+<section class="brief" id="brief">
+  <div class="container">
+    <p class="timecode">00:00:00:03 — START A PROJECT</p>
+    <div class="brief-header reveal-up">
+      <h2 class="section-title">প্রজেক্ট করাতে চান?<br>নিচের ফর্মটি পূরণ করুন।</h2>
+      <p>প্রতিটা তথ্য দিন, ফর্ম সাবমিট করলেই WhatsApp খুলে যাবে আপনার সব তথ্যসহ — শুধু Send চাপ দিলেই আমার কাছে পৌঁছে যাবে।</p>
+    </div>
+
+    <form id="whatsappBriefForm" class="brief-form-card reveal-up" novalidate>
+      <div class="form-grid">
+
+        <div class="form-group field-highlight field-pink">
+          <label for="briefName">আপনার নাম</label>
+          <input type="text" id="briefName" name="briefName" placeholder="যেমন: রাকিব হাসান" required>
+        </div>
+
+        <div class="form-group field-highlight field-blue">
+          <label for="briefAddress">আপনার ঠিকানা</label>
+          <input type="text" id="briefAddress" name="briefAddress" placeholder="যেমন: বাড়ি ১২, রোড ৫, ধানমন্ডি, ঢাকা" required>
+        </div>
+
+        <div class="form-group field-highlight field-green">
+          <label for="briefWhatsapp">হোয়াটসঅ্যাপ নাম্বার</label>
+          <input type="tel" id="briefWhatsapp" name="briefWhatsapp" placeholder="যেমন: +8801XXXXXXXXX" required>
+        </div>
+
+        <div class="form-group field-highlight field-amber">
+          <label for="briefBudget">আপনার বাজেট (৳)</label>
+          <input type="text" id="briefBudget" name="briefBudget" placeholder="আপনার বাজেট লিখুন" required>
+        </div>
+
+        <!-- Project Language — custom colorful dropdown -->
+        <div class="form-group">
+          <label>প্রজেক্ট ল্যাঙ্গুয়েজ</label>
+          <div class="custom-select" data-select="briefLanguage">
+            <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+              <span class="custom-select-value-wrap">
+                <span class="trigger-dot" hidden></span>
+                <span class="custom-select-value placeholder">ভাষা বাছাই করুন</span>
+              </span>
+              <svg class="custom-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="custom-select-menu" role="listbox">
+              <li class="custom-select-option" role="option" data-value="বাংলা"><span class="option-dot dot-green"></span>বাংলা</li>
+              <li class="custom-select-option" role="option" data-value="English"><span class="option-dot dot-blue"></span>English</li>
+              <li class="custom-select-option" role="option" data-value="হিন্দি"><span class="option-dot dot-orange"></span>হিন্দি</li>
+              <li class="custom-select-option" role="option" data-value="মিশ্র (বাংলা + ইংরেজি)"><span class="option-dot dot-purple"></span>মিশ্র (বাংলা + ইংরেজি)</li>
+              <li class="custom-select-option" role="option" data-value="অন্যান্য"><span class="option-dot dot-gray"></span>অন্যান্য</li>
+            </ul>
+          </div>
+          <input type="hidden" id="briefLanguage" name="briefLanguage" required>
+        </div>
+
+        <!-- Video Type — custom colorful dropdown -->
+        <div class="form-group">
+          <label>কোন টাইপের ভিডিও</label>
+          <div class="custom-select" data-select="briefVideoType">
+            <button type="button" class="custom-select-trigger" aria-haspopup="listbox" aria-expanded="false">
+              <span class="custom-select-value-wrap">
+                <span class="trigger-dot" hidden></span>
+                <span class="custom-select-value placeholder">ক্যাটাগরি বাছাই করুন</span>
+              </span>
+              <svg class="custom-select-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+            <ul class="custom-select-menu" role="listbox">
+              <li class="custom-select-option" role="option" data-value="মোশন গ্রাফিক্স"><span class="option-dot dot-purple"></span>মোশন গ্রাফিক্স</li>
+              <li class="custom-select-option" role="option" data-value="টকিং হেড"><span class="option-dot dot-blue"></span>টকিং হেড</li>
+              <li class="custom-select-option" role="option" data-value="ডকুমেন্টারি"><span class="option-dot dot-amber"></span>ডকুমেন্টারি</li>
+              <li class="custom-select-option" role="option" data-value="রিলস / শর্টস"><span class="option-dot dot-pink"></span>রিলস / শর্টস</li>
+              <li class="custom-select-option" role="option" data-value="অন্যান্য"><span class="option-dot dot-gray"></span>অন্যান্য</li>
+            </ul>
+          </div>
+          <input type="hidden" id="briefVideoType" name="briefVideoType" required>
+        </div>
+
+        <div class="form-group">
+          <label for="briefTopic">ভিডিও টপিক</label>
+          <input type="text" id="briefTopic" name="briefTopic" placeholder="যেমন: ইউটিউব গেমিং হাইলাইট রিল" required>
+        </div>
+
+        <div class="form-group form-group-full">
+          <label for="briefDetails">প্রজেক্ট ডিটেইলস</label>
+          <textarea id="briefDetails" name="briefDetails" rows="4" placeholder="আপনার প্রজেক্ট সম্পর্কে বিস্তারিত লিখুন — কী ধরনের এডিট চান, রেফারেন্স, ডেডলাইন ইত্যাদি..." required></textarea>
+        </div>
+
+        <p class="form-error" id="briefFormError" role="alert" aria-live="polite"></p>
+
+        <button type="submit" class="btn btn-primary btn-form-send" data-magnetic>
+          <span class="contact-cta-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.463 3.483 1.343 4.997L2 22l5.144-1.334a9.96 9.96 0 0 0 4.86 1.238h.004c5.514 0 9.997-4.483 9.997-9.998C22 6.483 17.518 2 12.004 2zm0 18.19h-.003a8.19 8.19 0 0 1-4.17-1.14l-.299-.178-3.055.793.816-2.978-.194-.306a8.176 8.176 0 0 1-1.256-4.384c0-4.522 3.68-8.2 8.204-8.2 2.19 0 4.249.854 5.798 2.404a8.144 8.144 0 0 1 2.4 5.802c0 4.523-3.679 8.187-8.241 8.187z"/></svg>
+          </span>
+          WhatsApp-এ পাঠান
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="container">
+    <p class="timecode">00:00:00:04 — SERVICES</p>
+    <h2 class="section-title reveal-up">What I can cut<br>for you.</h2>
+
+    <div class="services-grid">
+      <article class="service-card reveal-up">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none"><path d="M6 12h20a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V15a3 3 0 0 1 3-3Z" stroke="currentColor" stroke-width="1.6"/><path d="m29 17 8-4v14l-8-4" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        <h3>Talking Head Videos</h3>
+        <p>ক্যামেরার সামনে উপস্থাপিত কনটেন্টকে আরও আকর্ষণীয় করে তুলতে স্মুথ কাট, সাবটাইটেল, জুম, বি-রোল এবং ভিজ্যুয়াল ইফেক্টের মাধ্যমে দর্শকের মনোযোগ ধরে রাখার মতো এডিটিং করি।</p>
+      </article>
+      <article class="service-card reveal-up">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none"><path d="M20 4v6M20 30v6M4 20h6M30 20h6M9 9l4 4M27 27l4 4M31 9l-4 4M13 27l-4 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="20" cy="20" r="7" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h3>Promotional Videos</h3>
+        <p>ব্র্যান্ড, পণ্য বা সেবাকে আকর্ষণীয়ভাবে উপস্থাপন করার জন্য প্রফেশনাল প্রমোশনাল ভিডিও তৈরি করি, যা দর্শকের আগ্রহ বাড়ায় এবং ব্র্যান্ডের মূল্য আরও সুন্দরভাবে তুলে ধরে।</p>
+      </article>
+      <article class="service-card reveal-up">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none"><rect x="8" y="6" width="24" height="28" rx="3" stroke="currentColor" stroke-width="1.6"/><path d="M15 14h10M15 20h10M15 26h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Facebook Ads</h3>
+        <p>Facebook ও Instagram বিজ্ঞাপনের জন্য এমন ভিডিও তৈরি করি, যা প্রথম কয়েক সেকেন্ডেই দর্শকের মনোযোগ আকর্ষণ করে এবং ভালো পারফরম্যান্স অর্জনে সহায়তা করে।</p>
+      </article>
+      <article class="service-card reveal-up">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none"><rect x="4" y="10" width="32" height="20" rx="5" stroke="currentColor" stroke-width="1.6"/><path d="M16 16.5 24 20l-8 3.5v-7Z" fill="currentColor"/></svg>
+        <h3>YouTube Editing</h3>
+        <p>দীর্ঘ ইউটিউব ভিডিওকে আরও প্রাণবন্ত করতে সঠিক পেসিং, ভিজ্যুয়াল স্টোরিটেলিং, বি-রোল, টেক্সট অ্যানিমেশন এবং ক্লিন এডিটিং ব্যবহার করি।</p>
+      </article>
+      <article class="service-card reveal-up">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none"><path d="M6 30 16 12l6 10 4-6 8 14H6Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="13" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+        <h3>Motion Graphics</h3>
+        <p>টাইটেল অ্যানিমেশন, লোগো রিভিল, ইনফোগ্রাফিক্স এবং বিভিন্ন মোশন ডিজাইনের মাধ্যমে ভিডিওকে আরও আধুনিক, আকর্ষণীয় এবং প্রিমিয়াম লুক প্রদান করি।</p>
+      </article>
+      <article class="service-card reveal-up">
+        <svg class="service-icon" viewBox="0 0 40 40" fill="none"><rect x="10" y="5" width="20" height="30" rx="4" stroke="currentColor" stroke-width="1.6"/><path d="M17 30h6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        <h3>Reels &amp; Documentary Videos</h3>
+        <p>বাস্তব ঘটনা ও গল্পকে আরও শক্তিশালীভাবে উপস্থাপন করতে সিনেম্যাটিক এডিটিং, সাউন্ড ডিজাইন এবং আবেগপূর্ণ ভিজ্যুয়াল ন্যারেটিভের সমন্বয় করি।</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCE ============ -->
+<section class="experience" id="experience">
+  <div class="container">
+    <p class="timecode">00:00:00:05 — EXPERIENCE</p>
+    <h2 class="section-title reveal-up">Timeline of the cut.</h2>
+
+    <div class="timeline">
+      <div class="timeline-line"><div class="timeline-progress" id="timelineProgress"></div></div>
+
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2026 — Present</span>
+        <h3>Freelance Video Editor</h3>
+        <p class="timeline-org">Multiple Agencies & International Clients</p>
+        <p>বিভিন্ন এজেন্সি ও ক্লায়েন্টের জন্য কমার্শিয়াল ভিডিও, ইউটিউব কনটেন্ট, সোশ্যাল মিডিয়া ভিডিও এবং প্রমোশনাল ভিডিও এডিট করে আসছি। প্রতিটি প্রজেক্টে মানসম্মত ভিজ্যুয়াল ও আকর্ষণীয় স্টোরিটেলিং নিশ্চিত করি।</p>
+      </div>
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2026- Jan </span>
+        <h3>Video Editing Instructor</h3>
+        <p class="timeline-org">IT Training Institutes</p>
+        <p>বিভিন্ন আইটি ট্রেনিং সেন্টারে ভিডিও এডিটিং প্রশিক্ষক হিসেবে কাজ করেছি। শিক্ষার্থীদের Adobe Premiere Pro, After Effects এবং আধুনিক ভিডিও এডিটিং ওয়ার্কফ্লো শেখানোর অভিজ্ঞতা রয়েছে।</p>
+      </div>
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2025 — Nov</span>
+        <h3>Motion Graphics Designer</h3>
+        <p class="timeline-org">Freelance Projects</p>
+        <p>টাইটেল অ্যানিমেশন, লোগো অ্যানিমেশন, সোশ্যাল মিডিয়া মোশন গ্রাফিক্স এবং বিভিন্ন ব্র্যান্ডের জন্য আকর্ষণীয় ভিজ্যুয়াল অ্যানিমেশন তৈরি করেছি।</p>
+      </div>
+      <div class="timeline-item reveal-up">
+        <div class="timeline-dot"></div>
+        <span class="timeline-date">2025-Jun</span>
+        <h3>Creative Video Editor</h3>
+        <p class="timeline-org">Agency Collaboration</p>
+        <p>বিভিন্ন ক্রিয়েটিভ এজেন্সির সঙ্গে কাজ করে Facebook Ads, Promotional Videos, Talking Head Videos এবং YouTube কনটেন্ট এডিট করেছি। ক্লায়েন্টের প্রয়োজন অনুযায়ী দ্রুত ও মানসম্মত ডেলিভারি নিশ্চিত করেছি।</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLIENTS ============ -->
+<section class="clients" id="clients">
+  <div class="container">
+    <p class="timecode">00:00:00:06 — CLIENTS</p>
+    <h2 class="section-title reveal-up">Brands I've cut for.</h2>
+  </div>
+  <div class="clients-marquee">
+    <div class="marquee-track" id="marqueeTrack">
+      <span class="client-logo">Faridpur ad agency</span>
+      <span class="client-logo">Flix premium shop</span>
+      <span class="client-logo">Nafi mart</span>
+      <span class="client-logo">Creative Galiriya</span>
+      <span class="client-logo">Medipanda</span>
+      <span class="client-logo">Zenvio Studio</span>
+      <span class="client-logo">Model It</span>
+      <span class="client-logo">Etc</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <p class="timecode">00:00:00:07 — TESTIMONIALS</p>
+    <h2 class="section-title reveal-up">What clients say.</h2>
+
+    <div class="testimonial-slider">
+      <div class="testimonial-track" id="testimonialTrack">
+        <div class="testimonial-card glass active">
+          <p>"মৃদুল ভাই, আপনি সত্যিই একজন অসাধারণ মোশন ভিডিও এডিটর। আপনার কাজের কোয়ালিটি, ক্রিয়েটিভিটি এবং ডিটেইলিং আমাকে প্রতিবারই মুগ্ধ করে।
+
+আপনার দক্ষতার ওপর আস্থা রেখেই আমি আমার এজেন্সির যাত্রা শুরু করেছি। ইনশাআল্লাহ, আমরা একসাথে অনেক ভালো কাজ করব এবং বড় কিছু অর্জন করব।
+
+আপনার জন্য অনেক শুভকামনা। ❤️"</p>
+          <div class="testimonial-author">
+            <span class="author-name">Creative Galeriya</span>
+            <span class="author-role">CEO And Graphic Designer</span>
+          </div>
+        </div>
+        <div class="testimonial-card glass">
+          <p>"This editor works very professionally and he does a very good job. I am amazed every time I see his work. He does a better job than I expected. Thank you very much."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Digital Sweep</span>
+            <span class="author-role">CEO</span>
+          </div>
+        </div>
+        <div class="testimonial-card glass">
+          <p>"Fast, communicative, and genuinely talented with motion graphics. Our logo reveal is still the first thing people mention about our rebrand."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Farah Islam</span>
+            <span class="author-role">Founder, Orbit Co.</span>
+          </div>
+        </div>
+        <div class="testimonial-card glass">
+          <p>"We hand him a folder of chaos every week and get back a reel that actually performs. Couldn't ask for a more reliable editor."</p>
+          <div class="testimonial-author">
+            <span class="author-name">Shafin Rahman</span>
+            <span class="author-role">Social Lead, Vertex Fitness</span>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonialDots"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <p class="timecode">00:00:00:08 — CONTACT</p>
+    <div class="contact-grid">
+      <div class="contact-info reveal-up">
+        <h2 class="section-title">Let's cut<br>something great.</h2>
+        <p>Have a project in mind? Reach out on any of these — I usually reply within a day.</p>
+
+        <div class="cta-grid">
+          <a href="https://wa.me/8801934811655" target="_blank" rel="noopener" class="contact-cta cta-whatsapp" data-magnetic>
+            <span class="contact-cta-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2c-5.514 0-9.997 4.483-9.997 9.997 0 1.763.463 3.483 1.343 4.997L2 22l5.144-1.334a9.96 9.96 0 0 0 4.86 1.238h.004c5.514 0 9.997-4.483 9.997-9.998C22 6.483 17.518 2 12.004 2zm0 18.19h-.003a8.19 8.19 0 0 1-4.17-1.14l-.299-.178-3.055.793.816-2.978-.194-.306a8.176 8.176 0 0 1-1.256-4.384c0-4.522 3.68-8.2 8.204-8.2 2.19 0 4.249.854 5.798 2.404a8.144 8.144 0 0 1 2.4 5.802c0 4.523-3.679 8.187-8.241 8.187z"/></svg>
+            </span>
+            <span class="contact-cta-text">
+              <span class="contact-cta-label">Chat on WhatsApp</span>
+              <span class="contact-cta-detail">+880 1934811655</span>
+            </span>
+          </a>
+
+          <a href="https://www.facebook.com/midulhossain6550/" target="_blank" rel="noopener" class="contact-cta cta-facebook" data-magnetic>
+            <span class="contact-cta-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12.06C22 6.505 17.523 2 12 2S2 6.505 2 12.06c0 5.02 3.657 9.184 8.438 9.94v-7.03H7.898v-2.91h2.54V9.845c0-2.507 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.878h2.773l-.443 2.91h-2.33V22c4.78-.756 8.437-4.92 8.437-9.94z"/></svg>
+            </span>
+            <span class="contact-cta-text">
+              <span class="contact-cta-label">Message on Facebook</span>
+              <span class="contact-cta-detail">facebook.com/yourpage</span>
+            </span>
+          </a>
+
+          <a href="mailto:tasaud934@gmail.com
+" class="contact-cta cta-email" data-magnetic>
+            <span class="contact-cta-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M2 6a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6zm2.2.2 7.8 6.4 7.8-6.4H4.2zM20 8.3l-7.4 6.06a1 1 0 0 1-1.27 0L4 8.3V18h16V8.3z"/></svg>
+            </span>
+            <span class="contact-cta-text">
+              <span class="contact-cta-label">Send an Email</span>
+              <span class="contact-cta-detail">tasaud934@gmail.com
+</span>
+            </span>
+          </a>
+
+          <a href="https://www.youtube.com/@mtech5065" target="_blank" rel="noopener" class="contact-cta cta-youtube" data-magnetic>
+            <span class="contact-cta-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </span>
+            <span class="contact-cta-text">
+              <span class="contact-cta-label">Subscribe on YouTube</span>
+              <span class="contact-cta-detail">youtube.com/@yourchannel</span>
+            </span>
+          </a>
+        </div>
+
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">Location</span>
+            <span>Faridpur,Dhaka, Bangladesh</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <a href="#hero" class="nav-logo">Midul Hossain<span class="dot">.</span></a>
+    <nav class="footer-links">
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#brief">Start Project</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="footer-socials">
+      <a href="#" aria-label="Facebook">FB</a>
+      <a href="#" aria-label="LinkedIn">IN</a>
+      <a href="#" aria-label="Instagram">IG</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© <span id="year"></span> Midul Hossain. All rights reserved.</span>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  </div>
+</footer>
+
+<!-- ============ SCRIPTS ============ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
